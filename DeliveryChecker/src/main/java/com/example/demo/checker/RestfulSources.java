@@ -17,9 +17,9 @@ public class RestfulSources {
 	
 	
 	@RequestMapping("/console")
-	public String index () {
-	    
-	    return "/home";
+public String index () {
+    
+    return "/home";
 	}
 	
 
