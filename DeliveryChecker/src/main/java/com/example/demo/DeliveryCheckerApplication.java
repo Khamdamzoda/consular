@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@EnableAutoConfiguration
-
 public class DeliveryCheckerApplication {
 
 	public static void main(String[] args) {
