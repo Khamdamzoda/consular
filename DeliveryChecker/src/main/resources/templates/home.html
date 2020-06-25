@@ -17,7 +17,7 @@
     
 
  input[type=text] {
-  width: 150px;
+  width: 250px;
   height: 25px ; 
   margin-top: 60px;
   margin: 8px 0;
@@ -30,6 +30,7 @@
  input[type=submit] {
   width: 150px;
   height: 25px ; 
+  margin-right:25px; 
   margin-top: 60px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -59,25 +60,6 @@ display: inline-block ;
 }
 
 
-
-.search {
-
-margin-right: 700px ; 
-margin-left: 100px ; 
-border:1px solid black; 
-style ="padding-right:80px;"
-
-}
-
-.search form {
-
-margin-left: 100px ; 
-
-style ="padding-right:80px;"
-
-}
-
-
 </style>
 </head>
 
@@ -92,10 +74,10 @@ style ="padding-right:80px;"
 <div class ="header"  th:replace="fragments/header :: myheader"></div>
 
 
-<div class="container" >
 
 
-<div class = "search" align = "left" >
+
+<div class = "search" align = "center" >
     
     
     
@@ -106,8 +88,8 @@ style ="padding-right:80px;"
 
 </form>
      
-</div>
 
+<div>
 
     
 </html> 
