@@ -15,14 +15,30 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class RestfulSources {
 	
+
 	
-	@RequestMapping("/console")
+	
+	
+@RequestMapping("/console")
 public String index () {
+		
+
     
     return "/home";
 	}
 	
 
+
+
+
+
+
+
+@RequestMapping("/save")
+public String search() {
 	
+return "" ; 
+
+}
 
 }
