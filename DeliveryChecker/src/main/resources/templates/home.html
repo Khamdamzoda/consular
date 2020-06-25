@@ -3,39 +3,82 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" th:href="@{/styles/main.css}"/>
-    <style>
+  
+
+    
+    
+    
+    
+    
+<style>
     body{
     background-color: #E5EFF0;
     }
     
 
  input[type=text] {
-  width: 80%;
+  width: 150px;
   height: 25px ; 
   margin-top: 60px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 2px solid green;
+  border: 1px solid black;
   border-radius: 4px;
-  background-color: #F6F8E0;
+
 }
+
+ input[type=submit] {
+  width: 150px;
+  height: 25px ; 
+  margin-top: 60px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color:  #E5EFF0;
+}
+input[type=submit]:hover {
+  background-color: #B2EAF1;
+  color: white;
+}
+  
   
 .header div{
 
 width:100%; 
 height : 100px; 
-background-color:#C1F8BF; 
+
 
 } 
 
-.form {
 
+
+
+.form {
 display: inline-block ; 
 }
 
 
-    </style>
+
+.search {
+
+margin-right: 700px ; 
+margin-left: 100px ; 
+border:1px solid black; 
+style ="padding-right:80px;"
+
+}
+
+.search form {
+
+margin-left: 100px ; 
+
+style ="padding-right:80px;"
+
+}
+
+
+</style>
 </head>
 
 
@@ -49,25 +92,22 @@ display: inline-block ;
 <div class ="header"  th:replace="fragments/header :: myheader"></div>
 
 
+<div class="container" >
 
 
-<div align = "center" >
+<div class = "search" align = "left" >
+    
+    
+    
+<form action"#"  th:action="@{/save}" >
+    
+    <div class="form"><p> <input type="text" /></p> </div>
+     <div class="form"> <p> <input type ="submit" value="Ҷустуҷу"></div>
 
-    <form action"#" th:action="@{/save}" >
-    
-    
-    
-    <div class="form">
-     <p> <input type="text" /></p>
-    </div>
-     
-     <div class="form">
-      <p> <input type ="submit" value="Ҷустуҷу">
-     </div>
-    
-     </form>
+</form>
      
 </div>
+
 
     
 </html> 
