@@ -1,51 +1,103 @@
 package com.example.demo.checker;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.SequenceInputStream;
-import java.net.URISyntaxException;
-import java.net.URL;
+
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+
+
+
 
 public class GetDocument {
 
+
+public GetDocument() {
+
+      
 	
-	
-	
-	
-long number  ; 
-String filename ; 
-Path path; 
-File file  ; 
-SequenceInputStream sis ; 
-Vector<File> list ; 
+}
 
 
 
 
-public GetDocument(long number , String filename) throws IOException, URISyntaxException {
+
+
+
+
+public static void search() throws IOException {
+Path path = Paths.get("\\\\172.30.1.1\\Shared\\DELIV_BACKUP\\2020_backup\\1_quarter");
+File pathtofile = path.toFile() ; 
+List<File> filesList ;
+BufferedReader br ; 
+Scanner scan  ; 
+File file; 
+try {
 	
-	this.number = number ; 
-	this.filename = filename ;
-	path = Paths.get(new URL("\\\\172.30.1.1\\shared\\DELIV_BACKUP\\").toURI())  ;
-	file  = new File(path.toString());
 	
+	if(pathtofile.isDirectory()){
+		
+	    filesList = new ArrayList<File>() ; 
+		File[] files = pathtofile.listFiles() ; 			
+		filesList.addAll(Arrays.asList(files)) ; 	
+		
+		
+		for (int i=0; i<filesList.size(); i++) {
+			file = (File) filesList.get(i) ; 
+			
+			
+			
+			
+			scan = new Scanner (new BufferedReader(new FileReader(file ))); 
+			while (scan.hasNextLine()){
+		    String str = scan.findInLine("403119776");
+	   
+   
+      
+        if(str!=null) {
+        	System.out.println("found" + "\t"+ str + "at\t" + file.getName());
+            }
+            	
+            
+            scan.nextLine(); 
+                   
+            }
+			
+		  
+		}	
+}
 	
-	
-	 
+}catch(Exception ex) {
+	ex.printStackTrace();
 }
 	
 
 
 
-public void search () {
-	
-	
+
+
+		
+	}
 	
 	
 }
 
 
-}
+
+
+
+
+
+
+
+
